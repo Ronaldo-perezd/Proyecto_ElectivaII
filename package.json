@@ -1,0 +1,41 @@
+{
+  "name": "taller_1_biblioteca",
+  "version": "1.0.0",
+  "description": "Este proyecto es una API RestFull desarrollada en Node.js con el framework Express. Su objetivo principal es ayudar a la gestión de libros, empleados y préstamos en una biblioteca municipal. Proporciona un sistema completo de CRUD (Crear, Leer, Actualizar y Eliminar) para administrar los datos asociados a los empleados, libros y servicios de la biblioteca.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app",
+    "docs": "jsdoc -d docs --configure jsdocConf.json",
+    "start:prod": "node src/app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "call-bind": "^1.0.5",
+    "chokidar": "^3.5.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "entities": "^4.5.0",
+    "express": "^4.18.2",
+    "get-intrinsic": "^1.2.2",
+    "has-proto": "^1.0.1",
+    "has-symbols": "^1.0.3",
+    "mongoose": "^7.6.7",
+    "object-inspect": "^1.13.1",
+    "picomatch": "^3.0.1",
+    "qs": "^6.11.2",
+    "safe-buffer": "^5.2.1",
+    "side-channel": "^1.0.4",
+    "strip-json-comments": "^5.0.1"
+  },
+  "devDependencies": {
+    "docdash": "^2.0.1",
+    "jsdoc": "^4.0.2",
+    "nodemon": "^3.0.2"
+  },
+  "directories": {
+    "doc": "docs"
+  }
+}
