@@ -1,7 +1,7 @@
 {
   "name": "proyecto_electiva2_api",
   "version": "1.0.0",
-  "description": "Este proyecto es una API RestFull desarrollada en Node.js con el framework Express. Su objetivo principal es ayudar a la gestión de libros, empleados y préstamos en una biblioteca municipal. Proporciona un sistema completo de CRUD (Crear, Leer, Actualizar y Eliminar) para administrar los datos asociados a los empleados, libros y servicios de la biblioteca.",
+  "description": "Este proyecto es una API RestFull desarrollada en Node.js con el framework Express. Su objetivo principal es ayudar a la gestión de libros, empleados y préstamos en una biblioteca municipal. Proporciona un sistema completo de CRUD (Crear, Leer, Actualizar y Eliminar) para administrar los datos asociados a los clientes, suscripciones y servicios del api.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
