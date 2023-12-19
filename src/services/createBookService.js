@@ -1,4 +1,4 @@
-const bookController = require("../controllers/bookController");
+const gestionController = require("../controllers/gestionController");
 
 /**
  * The function `getBookData` is an asynchronous function that retrieves book data and sends it as a
@@ -11,7 +11,7 @@ const bookController = require("../controllers/bookController");
  */
 const getBookData = async (req, res) => {
   try {
-    await bookController.getBookData().then((books) => {
+    await gestionController.getBookData().then((books) => {
       res.status(200).json({ books: books });
     });
   } catch (error) {
@@ -19,22 +19,11 @@ const getBookData = async (req, res) => {
   }
 };
 
-/**
- * The function `createBook` is an asynchronous function that handles the registration of a book by
- * extracting the necessary information from the request body and calling the `addBook` method of the
- * `bookController` object, then sending a success or error response accordingly.
- * @param req - The `req` parameter is the request object that contains information about the HTTP
- * request made by the client. It includes properties such as the request headers, request body,
- * request method, request URL, etc. In this case, the `req` object is used to access the `body`
- * property,
- * @param res - The `res` parameter is the response object that is used to send the response back to
- * the client. It contains methods and properties that allow you to control the response, such as
- * setting the status code and sending JSON data.
- */
+
 const createBook = async (req, res) => {
   try {
     const { ISBN, name, author, genre, copies, publication, fine } = req.body;
-    await bookController.addBook(
+    await gestionController.addBook(
       ISBN,
       name,
       author,
@@ -60,7 +49,7 @@ const createBook = async (req, res) => {
  */
 const deleteBook = async (req, res) => {
   try {
-    await bookController.deleteBook(req.params.id);
+    await gestionController.deleteBook(req.params.id);
     res.status(200).json({ message: "Book deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: "Error deleting the register" });
@@ -81,7 +70,7 @@ const updateBook = async (req, res) => {
   try {
     const { _id, name, author, genre, copies, date, fine } = req.body;
     
-    await bookController.updateBook(
+    await gestionController.updateBook(
       _id,
       name,
       author,
